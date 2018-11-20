@@ -71,7 +71,7 @@ export function InjectionView(config: RenderingViewOptions) {
             const classes = target.name;
             view.find(classes).replaceWith(coveComment.template(classes));
         })
-        $('#' + (config.target || 'view')).html(view);
+        $('#' + (config.target || 'view')).replaceWith(view);
         coveComment.onInit();
         const insta = new target();
         insta.onInit();

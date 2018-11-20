@@ -1,3 +1,3 @@
-import * as $ from '@static/js/jquery.1.11.1';
+import * as $ from 'jquery';
 declare var window: any;
 window.jQuery = window.$ = $;

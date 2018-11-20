@@ -42,6 +42,11 @@ module.exports = {
             new webpack.HotModuleReplacementPlugin(),
             new CopyWebpackPlugin([
                 {
+                    from: path.resolve(__dirname, 'static'),
+                    to: 'static',
+                    ignore: ['.*']
+                },
+                {
                     from: path.resolve(__dirname, 'src/index.html'),
                     to: '',
                     ignore: ['.*'],
