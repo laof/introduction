@@ -1,11 +1,6 @@
-
 const route: any = [
     {
-        name: 'debug',
-        component: (resolve: any) => require(['@serve/debug/debug.ts'], resolve)
-    },
-    {
-        name: 'home', // 地图信息
+        name: 'home', // 我的简历
         component: (resolve: any) => require(['@component/home/home.component.ts'], resolve)
     }
 ]

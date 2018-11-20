@@ -1,7 +1,6 @@
-import '@load/bootstrap';
 import '@load/swiper';
 import '@static/js/owl.carousel';
-import * as main from '@static/js/main';
+import * as main from '@static/js/start-main';
 
 import { OnInit, InjectionView } from '@src/serve/webengine';
 

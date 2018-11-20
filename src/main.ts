@@ -1,5 +1,7 @@
 import '@load/bootstrap';
-import component from './serve/route';
+// import component from './serve/route';
+import '@component/home/home.component';
+
 declare global {
     var AMap: any;
     var require: any;
@@ -16,5 +18,5 @@ declare global {
 //     component.debug();
 // }
 
-component.home();
+// component.home();
 
