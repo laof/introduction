@@ -1,0 +1,63 @@
+@theme-color: #2a8cff;
+@match-color: #53a0fc;
+body .btn[attr-status=edit].btn-default {
+    &:active:focus,
+    &:active:hover {
+        background: transparent;
+        color: @theme-color;
+        border: 1px solid @theme-color;
+    }
+}
+
+.btn.btn-primary {
+    background: @theme-color;
+    color: #fff;
+    border: 1px solid @theme-color;
+}
+
+body .btn-primary.btn-default {
+    &:active:focus,
+    &:active:hover {
+        background-color: @match-color;
+        border-color: @match-color;
+        color: #fff;
+    }
+}
+
+body .btn.hollow:active {
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        border-color: @match-color;
+        color: @theme-color;
+    }
+}
+
+.btn-primary:active {
+    background: @theme-color  !important;
+}
+
+button.btn-primary:active:hover {
+    border-color: @theme-color  !important;
+}
+
+.pagination>.active {
+    &>a,
+    &>a:focus,
+    &>a:hover,
+    &>span,
+    &>span:focus,
+    &>span:hover {
+        background-color: @theme-color;
+        border-color: @theme-color;
+    }
+}
+
+.dropdown-menu>.active {
+    &>a,
+    &>a:focus,
+    &>a:hover {
+        background-color: @theme-color;
+        background-image: none;
+    }
+}

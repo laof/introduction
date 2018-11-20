@@ -1,0 +1,218 @@
+<div class="admin-container">
+    <div class="panel panel-default user">
+        <div class="panel-heading">
+            <div class="title">广州市</div>
+            <div class="panel-right-bar">
+                <div class="input-group" id="keyword">
+                    <input class="form-control  btn-sm" placeholder="输入角色/关键字搜索">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default search-btn" type="button">查询</button>
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary add-btn" type="button">添加管理员</button>
+        </div>
+        <div class="panel-body">
+            <ul id="ztree" class="ztree"></ul>
+            <table class="table" id="table-list"></table>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="ae-admin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title view-title" id="ae-admin-title">
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="ae-admin-form">
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label">账号：</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" name="usename">
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label">密码：</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="password" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label">姓名：</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" maxlength="11" name="name">
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label">性别：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="sex">
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label">身份证号：</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" maxlength="11" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group required date-group ">
+                            <label class="col-sm-2 control-label">联系电话：</label>
+                            <div class="col-sm-10 time-input-group">
+                                <input class="form-control" maxlength="11" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group required date-group">
+                            <label class="col-sm-2 control-label">职责：</label>
+                            <div class="col-sm-10 time-input-group">
+                                <select class="form-control" name="sex">
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label ">注册区域：</label>
+                            <div class="col-sm-10">
+                                <div class="sign-in">
+                                    <select class="form-control" name="aeraselect1">
+                                        <option value="1">男</option>
+                                    </select>
+                                    <select class="form-control" name="aeraselect2">
+                                        <option value="1">男</option>
+                                    </select>
+                                    <select class="form-control" name="aeraselect3">
+                                        <option value="1">男</option>
+                                    </select>
+                                    <select class="form-control" name="aeraselect4">
+                                        <option value="1">男</option>
+                                    </select>
+                                    <select class="form-control" name="aeraselect5">
+                                        <option value="1">男</option>
+                                    </select>
+                                </div>
+                                <small class="help-block" style="color:#a94442;" data-bv-validator="notEmpty"
+                                    data-bv-for="usename" data-bv-result="NOT_VALIDATED" style="display: none;">值不能为空，请输入内容</small>
+                            </div>
+                        </div>
+                        <div class="form-group textarea">
+                            <label class="col-sm-2 control-label">备注：</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="3" name="remark"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel-btn" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" class="btn btn-primary submit-btn">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 设置权限 -->
+    <div class="modal fade" id="ae-power-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title view-title">设置权限</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="ae-power-form">
+                        <div class="col-sm-5">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">账号：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" disabled name="usename">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">密码：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" disabled name="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"></label>
+                                <div class="col-sm-9">
+                                    <button type="button" class="btn btn-primary add-power">添加权限</button>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table" id="power-list"></table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel-btn" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" class="btn btn-primary submit-btn">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新增权限 -->
+    <div class="modal fade" id="add-power-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title view-title">新增权限</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="add-power-form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">区/县：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="aeraselect4">
+                                    <option value="1">男</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">街道：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="aeraselect4">
+                                    <option value="1">男</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">居委会：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="aeraselect4">
+                                    <option value="1">男</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel-btn" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" class="btn btn-primary submit-btn">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

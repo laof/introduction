@@ -1,0 +1,27 @@
+div .ztree li a.curSelectedNode {
+    padding-top: 0px;
+    background-color: #cae0ff;
+    color: black;
+    height: 16px;
+    border: 1px #cae0ff solid;
+    opacity: 0.8;
+}
+
+
+div .ztree li span.button.add {
+    background-image: url(./add.png);
+    background-size: 13px;
+    background-position: 0 0;
+}
+
+div .ztree li span.button.edit {
+    background-image: url(./edit.png);
+    background-size: 13px;
+    background-position: 0 0;
+}
+
+div .ztree li span.button.remove {
+    background-image: url(./remove.png);
+    background-size: 13px;
+    background-position: 0 0;
+}

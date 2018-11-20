@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "sourceMap": true,
+        "outDir": "./dist/",
+        "target": "ES5",
+        "experimentalDecorators": true,
+        "paths": {
+            "*": [
+                "types/*"
+            ],
+            "@src/*": [
+                "src/*"
+            ],
+            "@static/*": [
+                "static/*"
+            ],
+            "@serve/*": [
+                "src/serve/*"
+            ],
+            "@load/*": [
+                "src/serve/load/*"
+            ],
+            "@plugin/*": [
+                "static/plugin/*"
+            ],
+            "@component/*": [
+                "src/component/*"
+            ],
+            "@node_modules/*": [
+                "node_modules/*"
+            ]
+        },
+    },
+    "exclude": [
+        "node_modules",
+        "static/plugin",
+    ]
+}

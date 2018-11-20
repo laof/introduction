@@ -1,0 +1,287 @@
+.form-group.required .control-label::before {
+    content: "*";
+    color: red;
+}
+
+form .form-group {
+    margin-bottom: 0;
+    min-height: 58px;
+}
+
+.form-group.has-error .control-label,
+.form-group.has-success .control-label {
+    color: #333;
+}
+
+textarea.form-control {
+    resize: none;
+    min-height: 125px;
+}
+
+.form-group.submit-bar {
+    margin-top: 24px;
+}
+
+.form-group.submit-bar {
+    margin-top: 24px;
+}
+
+.form-group.submit-bar button {
+    margin-right: 16px;
+}
+
+.form-inline.table-search {
+    height: 35px;
+    min-width: 920px;
+    overflow: hidden;
+    display: block;
+}
+
+.form-inline.table-search .form-group {
+    padding-left: 15px;
+    height: 35px;
+}
+
+.form-inline.table-search .form-group.to {
+    padding-left: 0;
+}
+
+.form-inline.table-search .date-group .input-group {
+    max-width: 180px;
+}
+
+.date-group input {
+    cursor: default !important;
+    background: #fff !important;
+}
+
+.form-inline.table-search .keyword {
+    display: inline-block;
+}
+
+.text-required::before {
+    content: "*";
+    color: red;
+}
+
+.options-btn {
+    margin-right: 8px;
+}
+
+table {
+    overflow: hidden;
+}
+
+td {
+    padding: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.split {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.text-green {
+    color: #00cc33;
+}
+
+.clear-float:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.ztree-container {
+    background: #fff !important;
+    border: 1px solid #f2f0f0;
+    border-radius: 5px;
+}
+
+/* style------------ */
+
+.panel.panel-default {
+    border: none;
+    box-shadow: none;
+}
+
+.panel.panel-default>.panel-heading {
+    background: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+    padding-right: 0;
+}
+
+.panel-heading-bar {
+    float: right;
+    margin-right: 16px!important;
+}
+
+.panel-heading-bar>.input-group {
+    width: 350px;
+    margin-right: 10px;
+    float: right;
+}
+
+.panel-heading-bar .btn {
+    float: right;
+}
+
+/*div .panel-body {*/
+    /*padding: 15px 0;*/
+/*}*/
+
+.btn {
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.btn.color-active {
+    background: #2a8cff;
+    color: #fff;
+    border: 1px solid #2a8cff;
+}
+
+body .color-active.btn-default:active:focus,
+body .color-active.btn-default:active:hover {
+    background-color: #53a0fc;
+    border-color: #53a0fc;
+    color: #fff;
+}
+
+.btn.color-cancel {
+    background: transparent;
+    color: #2a8cff;
+    border: 1px solid #2a8cff;
+}
+
+body .color-cancel.btn-default:active:focus,
+body .color-cancel.btn-default:active:hover {
+    background: transparent;
+    color: #2a8cff;
+    border: 1px solid #2a8cff;
+}
+
+/* edit */
+
+.btn[attr-status=edit] {
+    background: transparent;
+    color: #2a8cff;
+    border: 1px solid #2a8cff;
+}
+
+body .btn[attr-status=edit].btn-default:active:focus,
+body .btn[attr-status=edit].btn-default:active:hover {
+    background: transparent;
+    color: #2a8cff;
+    border: 1px solid #2a8cff;
+}
+
+.btn.btn-primary {
+    background: #2a8cff;
+    color: #fff;
+    border: 1px solid #2a8cff;
+}
+
+body .btn-primary.btn-default:active:focus,
+body .btn-primary.btn-default:active:hover {
+    background-color: #53a0fc;
+    border-color: #53a0fc;
+    color: #fff;
+}
+
+/* ----空心 */
+
+.btn.hollow {
+    background: transparent;
+    color: #2a8cff;
+    border: 1px solid #2a8cff;
+}
+
+body .btn.hollow:active:focus,
+body .btn.hollow:active:hover {
+    background-color: transparent;
+    border-color: #53a0fc;
+    color: #2a8cff;
+}
+
+/* --- */
+
+.table thead {
+    background: linear-gradient(to bottom, #eaeaea, #f7f7f7);
+}
+
+table.table-hover>tbody>tr:hover {
+    background: #e9f3ff !important;
+}
+
+table.table>tbody>tr>td,
+.bootstrap-table table.table>thead>tr>th {
+    border: none;
+}
+
+table.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.bootstrap-table table.table>thead>tr>th {
+    border-bottom: 1px solid #dddddd;
+}
+
+.options-btn {
+    font-size: 14px;
+    cursor: pointer;
+    color: #53a0fc;
+    background: transparent;
+}
+
+.btn-danger-a {
+    color: red;
+}
+
+.btn-primary:active {
+    background: #2a8cff !important;
+}
+
+a.btn-danger-a:focus,
+a.btn-danger-a:hover {
+    color: red;
+}
+
+.pagination-detail .btn-group.dropup .btn {
+    padding: 0;
+}
+
+button.btn-primary:active:hover {
+    border-color: #2a8cff !important;
+}
+
+.date-group .input-group-addon {
+    cursor: default;
+    background: transparent;
+}
+
+.date-group .input-group-addon span {
+    cursor: default!important;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover{
+    background-color: #2a8cff;
+    border-color: #2a8cff;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: #2a8cff;
+}
