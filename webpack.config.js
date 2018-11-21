@@ -4,6 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const rules = require('./build/webpack.rules.js');
 const par = process.argv
 const dev = par.includes('development');
+const { extname } = require('path');
+const minifyJs = require('uglify-es');
+const CleanCSS = require('clean-css');
+const minifyCss = new CleanCSS({});
 
 module.exports = {
     performance: {
@@ -44,7 +48,27 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, 'static'),
                     to: 'static',
-                    ignore: ['.*']
+                    ignore: ['.*'],
+                    transform: (content, path) => {
+                        if (dev) {
+                            return content;
+                        }
+                        const type = extname(path)
+                        if (/\.js/.test(type)) {
+                            const code = minifyJs.minify(content.toString()).code
+                            if (!code) {
+                                console.log('minifyJs error：-------------------：' + path)
+                            }
+                            return code || content
+                        } else if (/\.css/.test(type)) {
+                            const styles = minifyCss.minify(content.toString()).styles;
+                            if (!styles) {
+                                console.log('minifyCss error：-------------------：' + path)
+                            }
+                            return styles || content
+                        }
+                        return content;
+                    }
                 },
                 {
                     from: path.resolve(__dirname, 'src/index.html'),
