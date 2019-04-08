@@ -1,6 +1,7 @@
 # morepagets
 
 ```javascript
+
 import '@load/bootstrap';
 import '@load/bootstrap-table';
 import '@load/lo-form';
